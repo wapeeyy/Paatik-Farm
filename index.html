@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paatik Farm Cendawan Tiram</title>
+<meta name="description" content="Kit tanam cendawan tiram kelabu, cendawan segar dan bongkah borong dari Paatik Farm, Kota Bharu. Order terus melalui WhatsApp.">
+<meta property="og:title" content="Paatik Farm · Cendawan Tiram Kelabu">
+<meta property="og:description" content="Tanam cendawan sendiri di rumah. Kit RM25, pos seluruh Malaysia. Order melalui WhatsApp.">
+<meta property="og:image" content="img/hero.webp">
+<meta name="theme-color" content="#163021">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 16c0-7 5-11 12-11s12 4 12 11c-4-2-8-3-12-3S8 14 4 16z' fill='%23d8b98a'/%3E%3Crect x='13' y='14' width='6' height='13' rx='3' fill='%231f3d2b'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light dark;
+--bg:#fbfaf7;--ink:#18201b;--muted:#56605a;--card:#ffffff;--line:#e3e0d8;--accent:#1f3d2b;
+--forest:#1f3d2b;--forest2:#163021;--kraft:#d8b98a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141815;--ink:#eef1ec;--muted:#a9b2ab;--card:#1d231f;--line:#2e3630;--accent:#d8b98a}}
+:root[data-theme="dark"]{--bg:#141815;--ink:#eef1ec;--muted:#a9b2ab;--card:#1d231f;--line:#2e3630;--accent:#d8b98a}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 Outfit,system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+.band{padding:clamp(32px,5vw,72px) max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+h1,h2,h3{font-weight:800;line-height:1.05;text-wrap:balance;margin:0}
+h1{font-size:clamp(34px,6vw,56px)}h2{font-size:clamp(28px,4vw,40px);margin-bottom:12px}h3{font-size:21px}
+p{margin:0 0 12px}.lead{font-size:18px;max-width:58ch}
+nav{position:sticky;top:0;z-index:5;background:var(--forest2);color:#eef1ec}
+nav .wrap{display:flex;gap:18px;align-items:center;flex-wrap:wrap;padding:12px max(5vw,16px)}
+.logo{font-weight:800;font-size:22px;text-decoration:none;display:flex;gap:8px;align-items:center}
+.logo svg{width:28px;height:28px}
+nav .links{display:flex;gap:16px;flex-wrap:wrap;margin-left:auto;font-weight:600}
+nav .links a{text-decoration:none;opacity:.85}nav .links a:hover{opacity:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;background:var(--kraft);color:#1f2a22;font-weight:800;text-decoration:none;border:0;font-size:16px;cursor:pointer;font-family:inherit}
+.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid var(--kraft);outline-offset:2px}
+.btn.ghost{background:transparent;border:2px solid currentColor;color:inherit}
+.btn.wa{background:#25d366;color:#0b2a17}
+.btn svg{width:20px;height:20px;flex:none}
+.hero{background:var(--forest);color:#eef1ec}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:center}
+.hero .lead{color:#cbd6cd}
+.tag{display:inline-block;background:rgba(216,185,138,.18);color:var(--kraft);padding:6px 14px;border-radius:999px;font-weight:600;margin-bottom:16px}
+.price{display:flex;align-items:baseline;gap:12px;margin:18px 0 22px;flex-wrap:wrap}
+.price strong{font-size:clamp(40px,6vw,56px);font-weight:800;white-space:nowrap}
+.price span{color:#cbd6cd}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.ticks{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:6px;color:#cbd6cd}
+.ticks li::before{content:"✓ ";color:var(--kraft);font-weight:800}
+.pic3d{margin:0;perspective:1200px}
+.pic3d img{width:100%;height:auto;display:block;border-radius:28px;box-shadow:0 40px 80px -20px rgba(0,0,0,.6),0 0 0 1px rgba(216,185,138,.25);transform:rotateY(-8deg) rotateX(4deg);transition:transform .6s ease}
+.pic3d:hover img{transform:rotateY(0) rotateX(0)}
+.card img{width:calc(100% + 48px);margin:-24px -24px 8px;aspect-ratio:4/3;object-fit:cover;border-radius:20px 20px 0 0;display:block}
+.farm .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:center}
+.stack3{position:relative;aspect-ratio:1/1}
+.stack3 img{position:absolute;width:62%;border-radius:22px;box-shadow:0 30px 60px -20px rgba(0,0,0,.5);object-fit:cover;aspect-ratio:9/10}
+.stack3 img:first-child{left:0;top:8%;transform:rotate(-4deg)}
+.stack3 img:last-child{right:0;top:0;transform:rotate(3deg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:16px;margin-top:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:8px;overflow:hidden}
+.card .p{font-size:26px;font-weight:800;color:var(--accent)}
+.card .where{font-size:14px;color:var(--muted)}
+.card .btn{margin-top:auto;align-self:flex-start}
+.steps{list-style:none;padding:0;margin:24px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px;counter-reset:s}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--forest);color:#eef1ec;font-weight:800;font-size:20px;margin-bottom:12px}
+.order{background:var(--forest);color:#eef1ec}
+.order .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,56px)}
+form{display:grid;gap:14px;background:var(--forest2);padding:clamp(18px,3vw,28px);border-radius:20px}
+label{display:grid;gap:6px;font-weight:600}
+input,select,textarea{font:16px Outfit,system-ui,sans-serif;padding:12px 14px;border-radius:12px;border:1px solid #3c5a47;background:#0f2118;color:#eef1ec;min-height:48px;width:100%}
+textarea{min-height:90px;resize:vertical}
+.sum{display:flex;justify-content:space-between;gap:12px;font-size:20px;font-weight:800;border-top:1px dashed #3c5a47;padding-top:14px}
+.sum span{white-space:nowrap}
+.note{font-size:14px;color:#b5c3b9;margin:0}
+.err{color:#ffd2b0;font-size:14px;min-height:1em;margin:0}
+.hide{display:none!important}
+.bank{background:#0f2118;border:1px solid #3c5a47;border-radius:16px;padding:18px;margin-top:22px}
+.bank h3{color:var(--kraft);font-size:18px;margin-bottom:10px}
+.bank dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px;margin:0 0 12px}
+.bank dt{color:#b5c3b9}
+.bank dd{margin:0;font-weight:800;overflow-wrap:anywhere}
+.copy{background:transparent;border:2px solid var(--kraft);color:var(--kraft);border-radius:999px;min-height:44px;padding:0 18px;font:800 15px Outfit,system-ui,sans-serif;cursor:pointer}
+details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:4px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:800;padding:14px 0;min-height:44px}
+footer{background:var(--forest2);color:#b5c3b9;font-size:14px;padding-bottom:110px}
+footer .wrap{display:flex;gap:20px;justify-content:space-between;flex-wrap:wrap}
+/* Pembantu chat */
+.fab{position:fixed;right:16px;bottom:16px;z-index:20;width:60px;height:60px;border-radius:50%;border:0;background:#25d366;color:#0b2a17;box-shadow:0 10px 30px -6px rgba(0,0,0,.45);cursor:pointer;display:grid;place-items:center}
+.fab svg{width:30px;height:30px}
+.chat{position:fixed;right:16px;bottom:88px;z-index:20;width:min(380px,calc(100vw - 32px));max-height:min(560px,calc(100dvh - 110px));display:flex;flex-direction:column;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:20px;box-shadow:0 30px 60px -20px rgba(0,0,0,.5);overflow:hidden}
+.chat header{background:var(--forest2);color:#eef1ec;padding:14px 16px;display:flex;align-items:center;gap:10px}
+.chat header strong{display:block}
+.chat header small{color:#b5c3b9}
+.chat header button{margin-left:auto;background:transparent;border:0;color:#eef1ec;font-size:24px;cursor:pointer;width:44px;height:44px}
+.log{flex:1;overflow-y:auto;padding:14px;display:grid;gap:10px;align-content:start}
+.msg{max-width:88%;padding:10px 14px;border-radius:16px;font-size:15px;white-space:pre-line}
+.msg.bot{background:color-mix(in srgb,var(--forest) 12%,var(--card));border:1px solid var(--line);border-bottom-left-radius:4px}
+.msg.me{background:var(--forest);color:#eef1ec;justify-self:end;border-bottom-right-radius:4px}
+.msg a{font-weight:800}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 14px 12px}
+.chips button{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:8px 12px;font:600 14px Outfit,system-ui,sans-serif;cursor:pointer;min-height:40px}
+.ask{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
+.ask input{background:var(--bg);color:var(--ink);border-color:var(--line);min-height:44px}
+.ask button{border:0;border-radius:12px;background:var(--forest);color:#eef1ec;font:800 15px Outfit,system-ui,sans-serif;padding:0 16px;cursor:pointer}
+@media(max-width:820px){.hero .wrap,.order .wrap,.farm .wrap{grid-template-columns:minmax(0,1fr)}.hero .pic3d{order:-1;max-width:420px;margin:0 auto}.pic3d img{transform:none}}
+@media(max-width:600px){nav .links{display:none}nav .wrap > .btn{margin-left:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pic3d img{transition:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 16c0-7 5-11 12-11s12 4 12 11c-4-2-8-3-12-3S8 14 4 16z" fill="#d8b98a"/><rect x="13" y="14" width="6" height="13" rx="3" fill="#eef1ec"/></svg>Paatik Farm</a>
+  <div class="links"><a href="#produk">Produk</a><a href="#cara">Cara tanam</a><a href="#bayar">Bayaran</a><a href="#faq">Soalan</a></div>
+  <a class="btn" href="#order">Order</a>
+</div></nav>
+
+<section class="hero band" id="top"><div class="wrap">
+  <div>
+    <span class="tag">Dari kebun kami di Kota Bharu, Kelantan</span>
+    <h1>Tanam dan tuai cendawan tiram kelabu sendiri di rumah</h1>
+    <p class="lead" style="margin-top:16px">Kit lengkap dengan bongkah yang kami buat sendiri. Letak di tempat teduh, spray air setiap hari, dan tengok cendawan tumbuh. Seronok untuk anak-anak, dan sedap digoreng celup tepung.</p>
+    <div class="price"><strong class="hargaKit">RM25</strong><span>sekit · pos seluruh Malaysia</span></div>
+    <div class="row"><a class="btn" href="#order">Order kit sekarang</a><a class="btn wa waLink" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.2-.7-2.7-1.1-4.4-3.9-4.5-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9.9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3z"/></svg>WhatsApp kami</a></div>
+    <ul class="ticks"><li>Bongkah dibuat sendiri, bukan dari orang tengah</li><li>Panduan langkah demi langkah dalam kotak</li><li>Ada juga cendawan segar dan bongkah borong</li></ul>
+  </div>
+  <figure class="pic3d"><img src="img/hero.webp" alt="Jambak cendawan tiram kelabu tumbuh dari bongkah Paatik Farm" width="1400" height="1400"></figure>
+</div></section>
+
+<section class="band" id="produk"><div class="wrap">
+  <h2>Apa yang kami jual</h2>
+  <p class="lead">Semua dari kebun Paatik Farm di Kota Bharu.</p>
+  <div class="grid">
+    <div class="card"><img src="img/hero.webp" alt="Kit bongkah cendawan dengan cendawan tumbuh" loading="lazy"><h3>Kit Tanam Cendawan di Rumah</h3><div class="p hargaKit">RM25</div><p>1 bongkah cendawan tiram kelabu, kotak, botol spray dan kad panduan.</p><div class="where">Pos ke seluruh Malaysia</div><a class="btn" href="#order" data-pick="kit">Order kit</a></div>
+    <div class="card"><img src="img/segar.webp" alt="Cendawan tiram kelabu segar baru dituai" loading="lazy"><h3>Cendawan Tiram Kelabu Segar</h3><div class="p">Harga ikut hasil tuaian</div><p>Dituai setiap hari. Sesuai untuk rumah, kedai makan dan restoran.</p><div class="where">Kota Bharu dan kawasan sekitar sahaja · ambil sendiri atau dihantar</div><a class="btn" href="#order" data-pick="segar">Tanya harga hari ini</a></div>
+    <div class="card"><img src="img/borong.webp" alt="Bongkah cendawan di rak kebun Paatik Farm" loading="lazy"><h3>Bongkah Borong</h3><div class="p">Sebut harga ikut kuantiti</div><p>Untuk penanam baru atau yang nak tambah rumah cendawan.</p><div class="where">Kelantan dan negeri berdekatan</div><a class="btn" href="#order" data-pick="borong">Minta sebut harga</a></div>
+  </div>
+</div></section>
+
+<section class="band farm" style="padding-top:0"><div class="wrap">
+  <div class="stack3"><img src="img/tuaian.webp" alt="Hasil tuaian cendawan tiram kelabu dalam bakul" loading="lazy"><img src="img/borong.webp" alt="Rak bongkah di kebun" loading="lazy"></div>
+  <div>
+    <h2>Dari rak kami ke dapur anda</h2>
+    <p class="lead">Setiap bongkah kami buat dan jaga sendiri di kebun Paatik Farm, Kota Bharu. Cendawan dituai bila cukup kembang, dan terus diproses untuk dihantar.</p>
+    <a class="btn" href="#order" style="background:var(--forest);color:#eef1ec">Order sekarang</a>
+  </div>
+</div></section>
+
+<section class="band" id="cara" style="padding-top:0"><div class="wrap">
+  <h2>Cara tanam kit di rumah</h2>
+  <p class="lead">Tak perlu tanah atau baja. Cuma perlukan tempat teduh dan air bersih.</p>
+  <ol class="steps">
+    <li><h3>Buka mulut bongkah</h3><p style="margin:0">Buka penutup atau potong plastik di bahagian atas, ikut kad panduan.</p></li>
+    <li><h3>Letak di tempat teduh</h3><p style="margin:0">Pilih tempat yang lembap dan berangin, dan elakkan cahaya matahari terus.</p></li>
+    <li><h3>Spray air setiap hari</h3><p style="margin:0">Spray 2–3 kali sehari pada bahagian mulut bongkah supaya sentiasa lembap.</p></li>
+    <li><h3>Tuai bila kembang</h3><p style="margin:0">Pulas jambak cendawan dari pangkal, kemudian masak atau simpan dalam peti sejuk.</p></li>
+  </ol>
+</div></section>
+
+<section class="order band" id="order"><div class="wrap">
+  <div>
+    <h2>Order melalui WhatsApp</h2>
+    <p class="lead" style="color:#cbd6cd">Pilih produk dan isi butiran. Mesej order akan dibuka dalam WhatsApp, dan kami akan sahkan stok dan harga.</p>
+    <ul class="ticks">
+      <li>Kit dipos dalam 1–2 hari bekerja selepas bayaran</li>
+      <li>Cendawan segar: Kota Bharu dan kawasan sekitar</li>
+      <li>Borong: kami balas dengan sebut harga</li>
+    </ul>
+    <div class="bank" id="bayar">
+      <h3>Butiran bayaran</h3>
+      <dl>
+        <dt>Bank</dt><dd>Maybank</dd>
+        <dt>No. akaun</dt><dd id="acc">553056456827</dd>
+        <dt>Nama</dt><dd>PAATIK WORLDWIDE</dd>
+      </dl>
+      <button class="copy" type="button" id="copyAcc">Salin no. akaun</button>
+      <p class="note" style="margin-top:12px">Bayar selepas kami sahkan order dalam WhatsApp, kemudian hantar resit atau screenshot ke WhatsApp kami.</p>
+    </div>
+  </div>
+  <form id="f" novalidate>
+    <label>Produk<select id="prod"><option value="kit">Kit Tanam Cendawan</option><option value="segar">Cendawan segar</option><option value="borong">Bongkah borong</option></select></label>
+    <label id="qtyL">Kuantiti kit<input id="qty" type="number" inputmode="numeric" min="1" value="1"></label>
+    <label>Nama<input id="nama" autocomplete="name" required></label>
+    <label>No. telefon<input id="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="012-3456789" required></label>
+    <label id="alamatL">Alamat penghantaran<textarea id="alamat" autocomplete="street-address"></textarea></label>
+    <div class="row" id="zonRow">
+      <label style="flex:1 1 200px">Kawasan<select id="zon"><option value="0">Semenanjung</option><option value="10">Sabah / Sarawak</option></select></label>
+    </div>
+    <div class="sum" id="sumRow"><span>Anggaran jumlah</span><span id="total">RM25</span></div>
+    <p class="err" id="err" role="alert"></p>
+    <a class="btn wa" id="send" href="#order">Hantar ke WhatsApp</a>
+    <p class="note">WhatsApp Paatik Farm: <a class="waLink waShow" href="#" target="_blank" rel="noopener"></a></p>
+  </form>
+</div></section>
+
+<section class="band" id="faq"><div class="wrap" style="max-width:820px">
+  <h2>Soalan lazim</h2>
+  <details><summary>Berapa lama baru cendawan keluar?</summary><p>Bergantung pada cuaca dan kelembapan tempat. Ikut panduan dalam kotak, dan WhatsApp kami kalau cendawan tak keluar.</p></details>
+  <details><summary>Boleh tuai berapa kali?</summary><p>Satu bongkah biasanya boleh dituai lebih dari sekali kalau dijaga dengan baik. Selepas tuai, teruskan spray dan tunggu jambak seterusnya.</p></details>
+  <details><summary>Kenapa cendawan segar tak dipos?</summary><p>Cendawan segar cepat layu dalam perjalanan. Kami hantar dalam kawasan Kota Bharu supaya sampai masih segar.</p></details>
+  <details><summary>Macam mana nak bayar?</summary><p>Lepas kami sahkan order dalam WhatsApp, bank in ke Maybank 553056456827 (PAATIK WORLDWIDE) dan hantar resit ke WhatsApp kami.</p></details>
+</div></section>
+
+<footer class="band"><div class="wrap">
+  <div><strong style="color:#eef1ec">Paatik Farm</strong> · PAATIK WORLDWIDE · Kota Bharu, Kelantan · WhatsApp <a class="waLink waShow" href="#" target="_blank" rel="noopener"></a></div>
+  <div>Kit rosak semasa sampai? Hantar gambar dalam 3 hari dan kami ganti.</div>
+</div></footer>
+
+<button class="fab" id="fab" type="button" aria-label="Tanya Paatik Farm" aria-expanded="false" aria-controls="chat"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.2-.7-2.7-1.1-4.4-3.9-4.5-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9.9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3z"/></svg></button>
+<div class="chat hide" id="chat" role="dialog" aria-label="Pembantu Paatik Farm">
+  <header><div><strong>Pembantu Paatik Farm</strong><small>Jawab soalan biasa dengan segera</small></div><button type="button" id="close" aria-label="Tutup">×</button></header>
+  <div class="log" id="log" aria-live="polite"></div>
+  <div class="chips" id="chips"></div>
+  <form class="ask" id="ask"><input id="q" placeholder="Tulis soalan anda…" autocomplete="off" aria-label="Soalan"><button type="submit">Hantar</button></form>
+</div>
+
+<script>
+{
+  // Tukar nombor WhatsApp dan harga di sini
+  const CONFIG = { whatsapp: "601114892341", paparWa: "011-1489 2341", hargaKit: 25, posSabahSarawak: 10,
+    bank: "Maybank", akaun: "553056456827", namaAkaun: "PAATIK WORLDWIDE" };
+  const $ = id => document.getElementById(id);
+  const wa = (t) => "https://wa.me/" + CONFIG.whatsapp + (t ? "?text=" + encodeURIComponent(t) : "");
+  document.querySelectorAll(".waLink").forEach(a => a.href = wa("Salam Paatik Farm, saya nak tanya pasal cendawan."));
+  document.querySelectorAll(".waShow").forEach(a => a.textContent = CONFIG.paparWa);
+  document.querySelectorAll(".hargaKit").forEach(e => e.textContent = "RM" + CONFIG.hargaKit);
+  $("zon").options[1].value = CONFIG.posSabahSarawak;
+
+  $("copyAcc").addEventListener("click", async () => {
+    try { await navigator.clipboard.writeText(CONFIG.akaun); $("copyAcc").textContent = "Disalin ✓"; }
+    catch { $("copyAcc").textContent = CONFIG.akaun; }
+    setTimeout(() => $("copyAcc").textContent = "Salin no. akaun", 2000);
+  });
+
+  const labels = { kit: "Kuantiti kit", segar: "Berat (kg)", borong: "Bilangan bongkah" };
+  const names = { kit: "Kit Tanam Cendawan", segar: "Cendawan tiram kelabu segar", borong: "Bongkah borong" };
+  const units = { kit: "kit", segar: "kg", borong: "bongkah" };
+  const build = () => {
+    const p = $("prod").value, q = Math.max(1, +$("qty").value || 1), isKit = p === "kit";
+    $("qtyL").firstChild.textContent = labels[p];
+    $("zonRow").classList.toggle("hide", !isKit);
+    $("sumRow").classList.toggle("hide", !isKit);
+    $("alamatL").firstChild.textContent = isKit ? "Alamat penghantaran" : "Kawasan / alamat (untuk hantar)";
+    const total = CONFIG.hargaKit * q + +$("zon").value;
+    $("total").textContent = "RM" + total;
+    let msg = `Salam Paatik Farm, saya nak order:\n• ${names[p]}: ${q} ${units[p]}`;
+    if (isKit) msg += `\n• Kawasan: ${$("zon").selectedOptions[0].text}\n• Anggaran jumlah: RM${total}`;
+    msg += `\n\nNama: ${$("nama").value}\nTel: ${$("tel").value}\nAlamat: ${$("alamat").value}`;
+    $("send").href = wa(msg);
+  };
+  ["prod","qty","nama","tel","alamat","zon"].forEach(id => $(id).addEventListener("input", build));
+  document.querySelectorAll("[data-pick]").forEach(a => a.addEventListener("click", () => { $("prod").value = a.dataset.pick; build(); }));
+  $("send").addEventListener("click", e => {
+    const need = ["nama","tel"].concat($("prod").value === "kit" ? ["alamat"] : []);
+    const miss = need.filter(id => !$(id).value.trim());
+    if (miss.length) { e.preventDefault(); $("err").textContent = "Sila isi nama, telefon" + ($("prod").value === "kit" ? " dan alamat" : "") + " dulu."; $(miss[0]).focus(); }
+    else { $("err").textContent = ""; $("send").target = "_blank"; $("send").rel = "noopener"; }
+  });
+  $("f").addEventListener("submit", e => e.preventDefault());
+  build();
+
+  // Pembantu chat: jawab soalan lazim terus di website, kemudian sambung ke WhatsApp
+  const A = {
+    harga: { k: ["harga","berapa","rm","price","mahal","murah"], a: `Kit Tanam Cendawan: RM${CONFIG.hargaKit} sekit (pos Sabah/Sarawak tambah RM${CONFIG.posSabahSarawak}).\nCendawan segar: harga ikut tuaian hari ini.\nBongkah borong: sebut harga ikut kuantiti.` },
+    order: { k: ["order","beli","nak","tempah","pesan","buy"], a: `Senang je! Isi borang order kat bawah, tekan "Hantar ke WhatsApp", dan kami sahkan stok.` , go: "#order" },
+    bayar: { k: ["bayar","bank","akaun","transfer","maybank","duitnow","payment","bank in"], a: `Bayar ke:\n${CONFIG.bank} ${CONFIG.akaun}\n${CONFIG.namaAkaun}\n\nBayar selepas kami sahkan order, kemudian hantar resit ke WhatsApp kami.` },
+    pos: { k: ["pos","hantar","delivery","penghantaran","sampai","kurier","courier","sabah","sarawak"], a: `Kit dipos seluruh Malaysia dalam 1–2 hari bekerja selepas bayaran.\nCendawan segar dihantar sekitar Kota Bharu sahaja supaya masih segar.` },
+    tanam: { k: ["tanam","jaga","spray","siram","cara","tumbuh","keluar","lama"], a: `1. Buka mulut bongkah\n2. Letak di tempat teduh dan berangin\n3. Spray air 2–3 kali sehari\n4. Tuai bila kembang, pulas dari pangkal\n\nCendawan tak keluar? WhatsApp kami dengan gambar.` },
+    borong: { k: ["borong","banyak","kuantiti","wholesale","restoran","kedai"], a: `Untuk borong bongkah atau cendawan segar dalam kuantiti besar, WhatsApp kami jumlah yang anda perlukan dan kami bagi sebut harga.` },
+    lokasi: { k: ["mana","lokasi","alamat","kebun","kota bharu","kelantan","ambil"], a: `Kebun kami di Kota Bharu, Kelantan. Boleh ambil sendiri cendawan segar, WhatsApp dulu untuk tetapkan masa.` },
+    rosak: { k: ["rosak","pecah","refund","ganti","masalah"], a: `Kit rosak semasa sampai? Hantar gambar dalam 3 hari ke WhatsApp kami dan kami ganti.` }
+  };
+  const chips = [["Harga","harga"],["Cara order","order"],["Bayaran","bayar"],["Pos","pos"],["Cara tanam","tanam"],["Borong","borong"]];
+  const log = $("log");
+  const say = (t, who, link) => {
+    const d = document.createElement("div"); d.className = "msg " + who; d.textContent = t;
+    if (link) { d.append(document.createElement("br")); const a = document.createElement("a"); a.href = link.href; a.textContent = link.text; if (link.ext) { a.target = "_blank"; a.rel = "noopener"; } else a.addEventListener("click", () => toggle(false)); d.append(a); }
+    log.append(d); log.scrollTop = log.scrollHeight;
+  };
+  const answer = (key, asked) => {
+    const r = A[key];
+    if (r) say(r.a, "bot", r.go ? { href: r.go, text: "Pergi ke borang order →" } : { href: wa(asked || "Salam Paatik Farm"), text: "Sambung di WhatsApp →", ext: true });
+    else say("Soalan ni kami jawab sendiri di WhatsApp. Tekan bawah, mesej anda dah siap ditulis.", "bot", { href: wa("Salam Paatik Farm, " + asked), text: "Tanya di WhatsApp →", ext: true });
+  };
+  const match = t => { t = t.toLowerCase(); let best = null, n = 0; for (const [key, r] of Object.entries(A)) { const c = r.k.filter(w => t.includes(w)).length; if (c > n) { n = c; best = key; } } return best; };
+  chips.forEach(([label, key]) => { const b = document.createElement("button"); b.type = "button"; b.textContent = label; b.addEventListener("click", () => { say(label, "me"); answer(key, label); }); $("chips").append(b); });
+  $("ask").addEventListener("submit", e => { e.preventDefault(); const t = $("q").value.trim(); if (!t) return; say(t, "me"); $("q").value = ""; answer(match(t), t); });
+  let greeted = false;
+  const toggle = open => {
+    $("chat").classList.toggle("hide", !open); $("fab").setAttribute("aria-expanded", open);
+    if (open && !greeted) { greeted = true; say("Salam! Saya pembantu Paatik Farm 🍄\nPilih soalan di bawah atau tulis soalan anda.", "bot"); }
+    if (open) $("q").focus();
+  };
+  $("fab").addEventListener("click", () => toggle($("chat").classList.contains("hide")));
+  $("close").addEventListener("click", () => toggle(false));
+  document.addEventListener("keydown", e => { if (e.key === "Escape") toggle(false); });
+}
+</script>
+</body>
+</html>
