@@ -19,7 +19,11 @@ Pemilik memantau, beri idea dan buat keputusan akhir. Balas dalam Bahasa Melayu 
 ## Status semasa
 - [x] Website live di Netlify (visibility: Public)
 - [x] Teks auto-reply WhatsApp: WHATSAPP-AUTO-REPLY.md
-- [ ] Kos sekit belum diketahui (perlu untuk kira had kos iklan)
+- Kos bongkah: RM1.50. Cendawan segar: borong RM10/kg, runcit RM14/kg
+- Anggaran kos kit (bongkah+kotak+spray+kad+pos): ~RM11.50, untung ~RM13.50 sebelum iklan (anggaran, belum disahkan dengan pembekal)
+- Sasaran pemilik: untung RM5,000+ sebulan
+- Social media: belum aktif. Belum ada gambar/video sendiri
+- Pembekal untuk dicek: Kedai Kotak KB 013-371 3585, My Box Station Pasir Mas 019-777 5546, mypackaging.my (botol spray)
 - [ ] Test iklan Meta Click-to-WhatsApp: RM20/hari × 7 hari (A: Semenanjung RM12, B: Kelantan RM8)
 
 ## Kemas kini website
