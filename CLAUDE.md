@@ -22,6 +22,9 @@ Pemilik memantau, beri idea dan buat keputusan akhir. Balas dalam Bahasa Melayu 
 - Kos bongkah: RM1.50. Cendawan segar: borong RM10/kg, runcit RM14/kg
 - Anggaran kos kit (bongkah+kotak+spray+kad+pos): ~RM11.50, untung ~RM13.50 sebelum iklan (anggaran, belum disahkan dengan pembekal)
 - Sasaran pemilik: untung RM5,000+ sebulan
+- Kapasiti: 500 bongkah seminggu (~2,000 sebulan), bongkah ambil ~1 bulan untuk matang
+- Bongkah borong dijual RM2.50 (untung ~RM1)
+- Dah ada pelanggan cendawan segar borong. Fokus baru: jualan RUNCIT cendawan segar sekitar Kota Bharu
 - Social media: belum aktif. Belum ada gambar/video sendiri
 - Pembekal untuk dicek: Kedai Kotak KB 013-371 3585, My Box Station Pasir Mas 019-777 5546, mypackaging.my (botol spray)
 - [ ] Test iklan Meta Click-to-WhatsApp: RM20/hari × 7 hari (A: Semenanjung RM12, B: Kelantan RM8)
