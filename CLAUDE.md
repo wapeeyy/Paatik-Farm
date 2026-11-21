@@ -24,7 +24,8 @@ Pemilik memantau, beri idea dan buat keputusan akhir. Balas dalam Bahasa Melayu 
 - Sasaran pemilik: untung RM5,000+ sebulan
 - Kapasiti: 500 bongkah seminggu (~2,000 sebulan), bongkah ambil ~1 bulan untuk matang
 - Bongkah borong dijual RM2.50 (untung ~RM1)
-- Dah ada pelanggan cendawan segar borong. Fokus baru: jualan RUNCIT cendawan segar sekitar Kota Bharu
+- Dah ada pelanggan cendawan segar borong. FOKUS UTAMA (terkini): JUAL BONGKAH (bukan runcit cendawan segar)
+- Masalah: untung RM1/bongkah x 2,000 = maks RM2,000/bulan. Cadangan: harga bertingkat, pakej usahawan + kursus, beli balik hasil peserta
 - Social media: belum aktif. Belum ada gambar/video sendiri
 - Pembekal untuk dicek: Kedai Kotak KB 013-371 3585, My Box Station Pasir Mas 019-777 5546, mypackaging.my (botol spray)
 - [ ] Test iklan Meta Click-to-WhatsApp: RM20/hari × 7 hari (A: Semenanjung RM12, B: Kelantan RM8)
