@@ -1,0 +1,7 @@
+# Contoh video kit (guna gambar website). Ganti dengan klip video sebenar nanti.
+HOOK: Tanam cendawan sendiri kat rumah? Senang je!
+borong.webp | 2.5 | Bongkah kami buat sendiri di kebun Kota Bharu
+hero.webp   | 3   | Spray air 2–3 kali sehari, letak tempat teduh
+tuaian.webp | 2.5 | Seminggu dua, cendawan dah kembang
+segar.webp  | 2.5 | Tuai, goreng celup tepung. Sedap!
+PENUTUP: Kit Tanam Cendawan RM25 | Pos seluruh Malaysia
