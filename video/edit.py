@@ -36,9 +36,11 @@ def txtfile(tmp, text, width):
     return p.name.replace("\\", "/").replace(":", "\\:")
 
 
-def draw(tf, font, size, y, color=CREAM, box=None, start=0.0):
+def draw(tf, font, size, y, color=CREAM, box=None, start=0.0, shadow=False):
     s = (f"drawtext=fontfile='{font}':textfile='{tf}':fontsize={size}:fontcolor={color}"
          f":x=(w-text_w)/2:y={y}:line_spacing=14:text_align=center")
+    if shadow:
+        s += ":shadowcolor=black@0.55:shadowx=0:shadowy=5"
     if box:
         s += f":box=1:boxcolor={box}:boxborderw=28"
     if start:
@@ -47,7 +49,7 @@ def draw(tf, font, size, y, color=CREAM, box=None, start=0.0):
 
 
 def parse(path):
-    cfg = {"scenes": [], "hook": "", "music": "", "audio": False,
+    cfg = {"scenes": [], "hook": "", "music": "", "audio": False, "style": "biasa",
            "end": ["Kit Tanam Cendawan RM25", "Pos seluruh Malaysia"]}
     for line in open(path, encoding="utf-8"):
         line = line.strip()
@@ -57,6 +59,8 @@ def parse(path):
         k = key.strip().upper()
         if k == "HOOK" and "|" not in key:
             cfg["hook"] = val.strip()
+        elif k == "GAYA":
+            cfg["style"] = val.strip().lower()
         elif k == "MUZIK":
             cfg["music"] = val.strip()
         elif k == "SUARA_ASAL":
@@ -70,7 +74,7 @@ def parse(path):
     return cfg
 
 
-def scene(src, dur, cap, hook, keep_audio, out, tmp):
+def scene(src, dur, cap, hook, keep_audio, out, tmp, premium=False):
     fill = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1"
     is_img = os.path.splitext(src)[1].lower() in IMG
     if is_img:
@@ -83,11 +87,24 @@ def scene(src, dur, cap, hook, keep_audio, out, tmp):
         inp = ["-t", str(dur), "-i", src]
         base = f"{fill},fps={FPS}"
     vf = [base, "format=yuv420p"]
+    if premium:
+        vf += ["eq=contrast=1.07:saturation=1.12:gamma=0.96", "vignette=PI/5"]
+        if hook:
+            vf.append(draw(txtfile(tmp, hook, 18), F_BOLD, 84, "h*0.36", CREAM, None, 0.3, True))
+        if cap:
+            vf.append(draw(txtfile(tmp, cap, 26), F_SEMI, 52, "h-330", CREAM, None, 0.45, True))
+        vf.append(draw(txtfile(tmp, "P A A T I K   F A R M", 60), F_SEMI, 30, 110, KRAFT, None, 0, True))
+        vf = [x for x in vf if x]
+        return _render(src, inp, vf, dur, keep_audio, is_img, out)
     if hook:
         vf.append(draw(txtfile(tmp, hook, 19), F_BOLD, 88, 240, CREAM, FOREST + "@0.92"))
     if cap:
         vf.append(draw(txtfile(tmp, cap, 22), F_SEMI, 62, "h-440", CREAM, "black@0.55", 0.15))
     vf.append(draw(txtfile(tmp, "PAATIK FARM", 40), F_BOLD, 34, 90, KRAFT))
+    return _render(src, inp, vf, dur, keep_audio, is_img, out)
+
+
+def _render(src, inp, vf, dur, keep_audio, is_img, out):
     has_audio = keep_audio and not is_img and probe_audio(src)
     cmd = ["ffmpeg", "-y", *inp]
     if not has_audio:
@@ -119,6 +136,25 @@ def endcard(lines, out, tmp, dur=3.5):
          "-crf", "20", "-c:a", "aac", "-ar", "44100", "-ac", "2", "-shortest", out])
 
 
+XF = 0.6  # tempoh peralihan lembut (saat) untuk gaya premium
+
+
+def xfade_join(parts, durs, out):
+    cmd = ["ffmpeg", "-y"]
+    for p in parts:
+        cmd += ["-i", p]
+    fc, v, a, off = [], "0:v", "0:a", 0.0
+    for i in range(1, len(parts)):
+        off += durs[i - 1] - XF
+        fc.append(f"[{v}][{i}:v]xfade=transition=fade:duration={XF}:offset={off:.3f}[v{i}]")
+        fc.append(f"[{a}][{i}:a]acrossfade=d={XF}[a{i}]")
+        v, a = f"v{i}", f"a{i}"
+    cmd += ["-filter_complex", ";".join(fc), "-map", f"[{v}]", "-map", f"[{a}]",
+            "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", "-pix_fmt", "yuv420p",
+            "-c:a", "aac", out]
+    run(cmd)
+
+
 def main():
     if len(sys.argv) < 2:
         sys.exit(__doc__)
@@ -127,6 +163,7 @@ def main():
     cfg = parse(skrip)
     if not cfg["scenes"]:
         sys.exit("Tiada babak dalam skrip.")
+    premium = cfg["style"] == "premium"
     with tempfile.TemporaryDirectory() as tmp:
         parts = []
         for i, (f, d, cap) in enumerate(cfg["scenes"]):
@@ -135,19 +172,24 @@ def main():
                 sys.exit(f"Fail tak jumpa: {src}")
             out = os.path.join(tmp, f"s{i:02d}.mp4")
             print(f"Babak {i+1}: {os.path.basename(src)} ({d}s)")
-            scene(src, d, cap, cfg["hook"] if i == 0 else "", cfg["audio"], out, tmp)
+            scene(src, d, cap, cfg["hook"] if i == 0 else "", cfg["audio"], out, tmp, premium)
             parts.append(out)
         out = os.path.join(tmp, "end.mp4")
         endcard(cfg["end"], out, tmp)
         parts.append(out)
-        lst = os.path.join(tmp, "list.txt")
-        open(lst, "w").write("".join(f"file '{p}'\n" for p in parts))
         joined = os.path.join(tmp, "joined.mp4")
-        run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", joined])
+        durs = [d for _, d, _ in cfg["scenes"]] + [3.5]
+        if premium:
+            xfade_join(parts, durs, joined)
+            total = sum(durs) - XF * (len(durs) - 1)
+        else:
+            lst = os.path.join(tmp, "list.txt")
+            open(lst, "w").write("".join(f"file '{p}'\n" for p in parts))
+            run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", joined])
+            total = sum(durs)
         final = os.path.join(folder, "hasil.mp4")
         if cfg["music"]:
             m = cfg["music"] if os.path.isabs(cfg["music"]) else os.path.join(folder, cfg["music"])
-            total = sum(d for _, d, _ in cfg["scenes"]) + 3.5
             mix = (f"[1:a]volume=0.35,afade=t=out:st={total-1.5}:d=1.5[m];"
                    f"[0:a][m]amix=inputs=2:duration=first:dropout_transition=0,volume=2[a]")
             run(["ffmpeg", "-y", "-i", joined, "-stream_loop", "-1", "-i", m, "-filter_complex", mix,

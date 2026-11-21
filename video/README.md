@@ -10,5 +10,6 @@ hook besar di atas, kapsyen setiap babak, label PAATIK FARM, dan kad penutup den
 4. Jalankan: `python3 video/edit.py video/projek/<nama-video>/skrip.txt`
 5. Hasil: `video/projek/<nama-video>/hasil.mp4`
 
-Pilihan dalam skrip: `MUZIK: lagu.mp3`, `SUARA_ASAL: ya`, `PENUTUP: baris1 | baris2`.
+Pilihan dalam skrip: `GAYA: premium` (warna sinematik, peralihan lembut, teks minimal), `MUZIK: lagu.mp3`, `SUARA_ASAL: ya`, `PENUTUP: baris1 | baris2`.
+Muzik latar asas (dijana sendiri, bebas hak cipta): `video/muzik/lembut.m4a`.
 Font: Outfit (SIL Open Font License).

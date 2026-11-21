@@ -1,0 +1,9 @@
+# Video premium Kit Tanam Cendawan RM25
+GAYA: premium
+MUZIK: ../../muzik/lembut.m4a
+HOOK: Kebun cendawan kecil, di rumah anda.
+borong.webp | 3   | Bongkah dibuat sendiri di kebun Paatik Farm
+hero.webp   | 3.5 | Spray air. Letak di tempat teduh.
+tuaian.webp | 3   | Tunggu ia mekar.
+segar.webp  | 3   | Tuai segar, terus ke dapur.
+PENUTUP: Kit Tanam Cendawan RM25 | Pos seluruh Malaysia
